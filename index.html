@@ -1,0 +1,649 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Darshan | Engineering & Computer Science</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0f;
+            color: #f2f2f2;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 11, 15, 0.95);
+            border-bottom: 1px solid #222;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #aaa;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 90px 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .accent {
+            color: #6ea8fe;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 1.4rem;
+            color: #aaa;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #bbb;
+            font-size: 1.05rem;
+        }
+
+        .buttons {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 12px 22px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* ABOUT */
+
+        .about-text {
+            max-width: 800px;
+            color: #bbb;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            border-left: 2px solid #6ea8fe;
+            padding-left: 25px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            color: #aaa;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #292929;
+            padding: 28px;
+            border-radius: 8px;
+            background: #101014;
+            transition: 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: #555;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            color: #6ea8fe;
+        }
+
+        /* ACHIEVEMENTS */
+
+        .achievement-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .achievement {
+            padding: 20px;
+            border: 1px solid #292929;
+            border-radius: 8px;
+            background: #101014;
+        }
+
+        .achievement p {
+            color: #aaa;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            border: 1px solid #333;
+            padding: 8px 14px;
+            border-radius: 20px;
+            color: #ccc;
+        }
+
+        /* LINKS */
+
+        .links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: #6ea8fe;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #222;
+            color: #666;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .nav-links {
+                gap: 12px;
+                font-size: 0.85rem;
+            }
+
+            section {
+                padding: 70px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">DARSHAN</div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <p class="accent">ENGINEERING • COMPUTER SCIENCE • ROBOTICS</p>
+
+        <h1>Darshan.</h1>
+
+        <h2>Student • Builder • Engineer</h2>
+
+        <p>
+            I build systems that combine electronics, software and machine
+            learning to solve real-world problems.
+        </p>
+
+        <div class="buttons">
+
+            <!-- CHANGE THESE LINKS -->
+
+            <a class="button"
+               href="https://github.com/YOUR-USERNAME"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a class="button"
+               href="https://linkedin.com/in/YOUR-USERNAME"
+               target="_blank">
+                LinkedIn
+            </a>
+
+            <a class="button"
+               href="cv.pdf"
+               target="_blank">
+                View CV
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+
+        <div class="about-text">
+
+            <p>
+                I am a Cambridge International A Level student interested in
+                engineering, computer science, machine learning and robotics.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy designing and building projects from the ground up,
+                from electronics and embedded systems to software and
+                machine-learning applications.
+            </p>
+
+            <br>
+
+            <p>
+                My current interests include mechanical and electrical
+                engineering, robotics, embedded systems, artificial
+                intelligence and machine learning.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-card">
+
+            <h3>Seedling The World School</h3>
+
+            <p>
+                Cambridge International AS & A Levels
+                <br>
+                Expected Graduation: 2027
+            </p>
+
+            <br>
+
+            <p>
+              <h4>A Levels prediceted grades:</h4>
+              <br>
+                Mathematics — A*
+                <br>
+                Computer Science — A*
+                <br>
+                Physics — A*
+                <br>
+                Chemistry — A*
+                <br>
+                English General Paper — A
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="projects">
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <h3>Algal Bloom Reduction System</h3>
+
+                <p>
+                    An environmental engineering project investigating
+                    technology-based approaches to reducing algal blooms
+                    in local lakes.It uses ML to predict algal bloom and then accordingly uses ion exchange membranes and electric charges to reduce nutrients that lead to algal growth.
+                </p>
+
+                <!-- CHANGE LINK -->
+
+                <!-- <a class="project-link"
+                   href="projects/algal-bloom.html">
+                    View Project →
+                </a> -->
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <h3>HandSync</h3>
+
+                <p>
+                    An embedded machine-learning system using a Gyroaccelerometer and microcontroller 
+                    to capture and classify hand movements. It uses a convolutional neural network trained on approximately a 1000 samples and can classify between between A,B,C,D,E with 86% accuracy. The ai model runs locally on the microcontroller and attempts to test the limits of gesture classification with cheap hardware.
+                </p>
+
+                <!-- CHANGE LINK -->
+
+                <a class="project-link"
+                   href="https://www.electronicwings.com/users/DARSHANDOSHI/projects/6702/handsync">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <h3>LinkBot</h3>
+
+                <p>
+                    A machine-learning Discord bot that categorizes digital
+                    tools using TF-IDF and SVM classification. It was trained on over scraped data of 1700 websites. It categorizes digital tools into niche categories and uploads them on a discord server so people can use these tools without having to spend time finding tools that you need.
+                </p>
+
+                <!-- CHANGE LINK -->
+
+                <a class="project-link"
+                   href="https://github.com/darshan-09230/LinkVault"
+                   target="_blank">
+                    GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <h3>Tale Me</h3>
+
+                <p>
+                    A web platform that has multiple story and word related games. This was my first front-end web developement project
+                </p>
+
+                <!-- CHANGE LINK -->
+
+                <a class="project-link"
+                   href="projects/web-development.html">
+                    View Projects →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <section id="achievements">
+
+        <h2 class="section-title">Achievements & Leadership</h2>
+
+        <div class="achievement-list">
+
+            <div class="achievement">
+
+                <h3>House Captain — 3 Years</h3>
+
+                <p>
+                    Led and coordinated students across academic, sporting
+                    and cultural school competitions.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>Logo Design Competition — 2nd Place</h3>
+
+                <p>
+                    Placed second in a high-school logo design competition
+                    involving schools from across India.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>STEM Competitions</h3>
+
+                <p>
+                    Participated in and won multiple city-level STEM
+                    competitions.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>Community Fundraising</h3>
+
+                <p>
+                    Worked with a student team to raise approximately
+                    ₹25,000 through sponsorships during a school Diwali
+                    festival.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>Basketball</h3>
+
+                <p>
+                    3–4 years of competitive basketball with district-level
+                    participation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills">
+
+            <span class="skill">Python</span>
+            <span class="skill">C/C++</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">TailWind</span>
+
+
+            <span class="skill">Machine Learning</span>
+            <span class="skill">CNNs</span>
+            <span class="skill">TF-IDF</span>
+            <span class="skill">SVM</span>
+
+            <span class="skill">ESP32</span>
+            <span class="skill">Embedded Systems</span>
+            <span class="skill">IoT</span>
+            <span class="skill">BLE</span>
+
+            <span class="skill">CAD</span>
+            <span class="skill">3D Printing</span>
+            <span class="skill">Electronics</span>
+
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">Webscraping</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Links & Contact</h2>
+
+        <div class="links">
+
+            
+
+            <a href="https://github.com/darshan-09230"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/darshan-doshi-1619b0333"
+               target="_blank">
+                LinkedIn
+            </a>
+
+            <!-- <a href="https://YOUR-PORTFOLIO.com"
+               target="_blank">
+                Portfolio
+            </a> -->
+
+            <a href="mailto:darshandoshi092@gmail.com ">
+                Email
+            </a>
+
+            <!-- <a href="cv.pdf" target="_blank">
+                Download CV
+            </a> -->
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Darshan [Surname]
+
+    </footer>
+
+</body>
+</html>
+```
